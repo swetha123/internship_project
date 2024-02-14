@@ -4,5 +4,6 @@ numpy
 seaborn
 ipykernel
 yellowbrick
+flask
 
 -e .
