@@ -3,5 +3,7 @@ WORKDIR /service
 COPY requirements.txt .
 COPY . ./
 RUN pip install -r requirements.txt
-CMD [ "streamlit","run","app.py"]
 EXPOSE 8501
+ENTRYPOINT [ "streamlit","run"]
+CMD ['app.py']
+
