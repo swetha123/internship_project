@@ -3,5 +3,5 @@ WORKDIR /service
 COPY requirements.txt .
 COPY . ./
 RUN pip install -r requirements.txt
-ENTRYPOINT [ "streamlit","run","app.py"]
-EXPOSE 8080
+CMD [ "streamlit","run","app.py"]
+EXPOSE 8051
