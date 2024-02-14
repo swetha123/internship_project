@@ -70,7 +70,7 @@ class DataIngestion:
                             'MntSweetProducts','MntGoldProds', 'NumDealsPurchases', 'NumWebPurchases',
                             'NumCatalogPurchases', 'NumStorePurchases', 'NumWebVisitsMonth',
                             'AcceptedCmp3', 'AcceptedCmp4', 'AcceptedCmp5', 'AcceptedCmp1',
-                            'AcceptedCmp2','Z_CostContact', 'Z_Revenue',"Recency", "Complain",'Education'], axis=1, inplace=True)
+                            'AcceptedCmp2','Z_CostContact', 'Z_Revenue',"Recency", "Complain",'Education','Response','AcceptedCmp'], axis=1, inplace=True)
 
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
             data.to_csv(self.ingestion_config.raw_data_path,index=False)

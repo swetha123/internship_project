@@ -5,9 +5,10 @@ import sys
 from src.CustomerAnalysis.logger import logging 
 from src.CustomerAnalysis.exception import CustomException
 from dataclasses import dataclass
-
+from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
+
 
 
 from src.CustomerAnalysis.utils.utils import save_object
@@ -26,11 +27,15 @@ class ClusterFormer:
         try:
             logging.info('using kmeans clustering on the data')
 
+            pca = PCA(n_components=5)
+            pca.fit(preprocessed_array)
+            PCA_ds = pd.DataFrame(pca.transform(preprocessed_array))
+
             # using k-means to form clusters
             kmeans = KMeans(n_clusters=3, random_state=42)
-            target = kmeans.fit_predict(preprocessed_array) 
+            target = kmeans.fit_predict(PCA_ds) 
 
-            kmeans_score = silhouette_score(preprocessed_array, target)
+            kmeans_score = silhouette_score(PCA_ds, target)
             print(kmeans_score)
             
             
