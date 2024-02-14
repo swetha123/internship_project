@@ -12,7 +12,7 @@ jobs:
     steps: 
     - name: Check out code
       uses: actions/checkout@v2
-    - name: install Utilities
+    - name: Install Utilities
       run:
         sudo apt-get update
         sudo apt-get install -y jq unzip
