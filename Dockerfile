@@ -4,4 +4,4 @@ COPY requirements.txt .
 COPY . ./
 RUN pip install -r requirements.txt
 CMD [ "streamlit","run","app.py"]
-EXPOSE 8051
+EXPOSE 8501
