@@ -5,5 +5,6 @@ seaborn
 ipykernel
 yellowbrick
 flask
+streamlit
 
 -e .
