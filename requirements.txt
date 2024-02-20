@@ -5,5 +5,8 @@ seaborn
 ipykernel
 yellowbrick
 flask
+streamlit
+mlflow==2.2.2
+dvc
 
 -e .
