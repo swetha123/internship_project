@@ -32,7 +32,7 @@ class DataTransformation:
 
             # Define which columns should be ordinal-encoded and which should be scaled
             categorical_cols = ['relationship', 'Education_Level']
-            numerical_cols = ['Income', 'Age', 'members_home',
+            numerical_cols = ['Income', 'Age', 'children',
              'num_purchases', 'expenses']
         
             one_cols = ['relationship']

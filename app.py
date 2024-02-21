@@ -12,13 +12,13 @@ def main():
        Age = st.slider ( "Select Age", 18, 85 )
        relationship = st.radio ( "Livig With Partner? ", ('in_relationship', 'single') )
        Education_Level = st.radio ( "Select Education:", ('Undergraduate','Graduate','Postgraduate') )
-       members_home = st.radio ( "select the total members at the house ", ( '1','2','3','4') )
+       children = st.radio ( "select the total number of children at the house ", ( '1','2','3') )
        num_purschases = st.slider ( "select total number of purchases", 1, 148 )
        expenses = st.slider ( "select total amount of expenditure ", 0, 2500 )
 
-       input_data = [[Income, Age,relationship,Education_Level,members_home,num_purschases,expenses]]
+       input_data = [[Income, Age,relationship,Education_Level,children,num_purschases,expenses]]
        features = pd.DataFrame(input_data, columns=['Income', 'Age', 'relationship', 'Education_Level',
-       'members_home', 'num_purchases', 'expenses'])
+       'children', 'num_purchases', 'expenses'])
 
 
        result = ""

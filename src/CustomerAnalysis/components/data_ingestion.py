@@ -50,7 +50,7 @@ class DataIngestion:
                                     "PhD":"Postgraduate"})
 
             # counting the total number of people in the household
-            data['members_home']=data['Kidhome']+data['Teenhome']+data['relationship'].replace({'single':0,'in_relationship':1})
+            data['children']=data['Kidhome']+data['Teenhome']
 
             # creating single column for accepted column
             data['AcceptedCmp'] = data['AcceptedCmp1'] + data['AcceptedCmp2'] + data['AcceptedCmp3']

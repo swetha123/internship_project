@@ -27,7 +27,7 @@ class ClusterFormer:
         try:
             logging.info('using kmeans clustering on the data')
 
-            pca = PCA(n_components=5)
+            pca = PCA(n_components=4)
             pca.fit(preprocessed_array)
             PCA_ds = pd.DataFrame(pca.transform(preprocessed_array))
 
